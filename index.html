@@ -1,165 +1,297 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css">
-  </head>
-  <body>
-    <div class="container">
-      <h1>Brand Colors</h1>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://unpkg.com/tachyons@4.7.0/css/tachyons.min.css"/>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.7.1/clipboard.min.js"></script>
+</head>
 
-      <div class="row">
-        <div class="three columns">
-          <h4>Primary Colors</h4>
-          <p>The primary colors establish a consistent and cohesive brand across all of WOLA's communications and materials. The grey and white serve as a neutral base that represent our values as credible and committed.</p>
-        </div>
-        <div class="three columns" style="text-align:center;">
-          <svg height="150" width="150" align="center">
-            <circle cx="75" cy="75" r="70" fill="#00B5EF" />
-          </svg>
-          <p>
-            <strong>Pantone 2995 CP</strong>
-            <br>
-            HTML #00B5EF
-            <br>
-            CMYK 83 / 1 / 0 / 0
-            <br>
-            RGB 0 / 181 / 239
-          </p>
-        </div>
-        <div class="three columns" style="text-align:center;">
-          <svg height="150" width="150" align="center">
-            <circle cx="75" cy="75" r="70" fill="#65BD60" />
-          </svg>
-          <p>
-            <strong>Green</strong>
-            <br>
-            HTML #65BD60
-            <br>
-            CMYK 63 / 0 / 84 / 0
-            <br>
-            RGB 101 / 189 / 96
-          </p>
-        </div>
-        <div class="three columns" style="text-align:center;">
-          <svg height="150" width="150" align="center">
-            <circle cx="75" cy="75" r="70" fill="#603F99" />
-          </svg>
-          <p>
-            <strong>Purple</strong>
-            <br>
-            HTML #603F99
-            <br>
-            CMYK 76 / 90 / 0 / 0
-            <br>
-            RGB 96 / 63 / 153
-          </p>
-        </div>
-      </div>
-    </div>
+<style>
+	
+.wola-blue { color: #00b5ef; }
+.bg-wola-blue { background-color: #00b5ef; }
+.b--wola-blue { border-color: #00b5ef; }
 
-    <div class="row">
-      <div class="three columns">
-        <h4>Primary Colors</h4>
-        <p>The primary colors establish a consistent and cohesive brand across all of WOLA's communications and materials. The grey and white serve as a neutral base that represent our values as credible and committed.</p>
-      </div>
-      <div class="three columns" style="text-align:center;">
-        <svg height="150" width="150" align="center">
-          <circle cx="75" cy="75" r="70" fill="#00B5EF" />
-        </svg>
-        <p>
-          <strong>Pantone 2995 CP</strong>
-          <br>
-          HTML #00B5EF
-          <br>
-          CMYK 83 / 1 / 0 / 0
-          <br>
-          RGB 0 / 181 / 239
-        </p>
-      </div>
-      <div class="three columns" style="text-align:center;">
-        <svg height="150" width="150" align="center">
-          <circle cx="75" cy="75" r="70" fill="#65BD60" />
-        </svg>
-        <p>
-          <strong>Green</strong>
-          <br>
-          HTML #65BD60
-          <br>
-          CMYK 63 / 0 / 84 / 0
-          <br>
-          RGB 101 / 189 / 96
-        </p>
-      </div>
-      <div class="three columns" style="text-align:center;">
-        <svg height="150" width="150" align="center">
-          <circle cx="75" cy="75" r="70" fill="#603F99" />
-        </svg>
-        <p>
-          <strong>Purple</strong>
-          <br>
-          HTML #603F99
-          <br>
-          CMYK 76 / 90 / 0 / 0
-          <br>
-          RGB 96 / 63 / 153
-        </p>
-      </div>
-    </div>
-  </div>
+.hover-wola-blue:hover,
+.hover-wola-blue:focus { color: #00b5ef; }
 
-  <div class="row">
-    <div class="three columns">
-      <h4>Primary Colors</h4>
-      <p>The primary colors establish a consistent and cohesive brand across all of WOLA's communications and materials. The grey and white serve as a neutral base that represent our values as credible and committed.</p>
-    </div>
-    <div class="three columns" style="text-align:center;">
-      <svg height="150" width="150" align="center">
-        <circle cx="75" cy="75" r="70" fill="#00B5EF" />
-      </svg>
-      <p>
-        <strong>Pantone 2995 CP</strong>
-        <br>
-        HTML #00B5EF
-        <br>
-        CMYK 83 / 1 / 0 / 0
-        <br>
-        RGB 0 / 181 / 239
-      </p>
-    </div>
-    <div class="three columns" style="text-align:center;">
-      <svg height="150" width="150" align="center">
-        <circle cx="75" cy="75" r="70" fill="#65BD60" />
-      </svg>
-      <p>
-        <strong>Green</strong>
-        <br>
-        HTML #65BD60
-        <br>
-        CMYK 63 / 0 / 84 / 0
-        <br>
-        RGB 101 / 189 / 96
-      </p>
-    </div>
-    <div class="three columns" style="text-align:center;">
-      <svg height="150" width="150" align="center">
-        <circle cx="75" cy="75" r="70" fill="#603F99" />
-      </svg>
-      <p>
-        <strong>Purple</strong>
-        <br>
-        HTML #603F99
-        <br>
-        CMYK 76 / 90 / 0 / 0
-        <br>
-        RGB 96 / 63 / 153
-      </p>
-    </div>
-  </div>
-</div>
+.hover-bg-wola-blue:hover,
+.hover-bg-wola-blue:focus { background-color: #00b5ef; }
+
+.wola-purple { color: #603F99; }
+.bg-wola-purple { background-color: #603F99; }
+.b--wola-purple { border-color: #603F99; }
+
+.hover-wola-purple:hover,
+.hover-wola-purple:focus { color: #603F99; }
+
+.hover-bg-wola-purple:hover,
+.hover-bg-wola-purple:focus { background-color: #603F99; }
+
+.wola-green { color: #65BD60; }
+.bg-wola-green { background-color: #65BD60; }
+.b--wola-green { border-color: #65BD60; }
+
+.hover-wola-green:hover,
+.hover-wola-green:focus { color: #65BD60; }
+
+.hover-bg-wola-green:hover,
+.hover-bg-wola-green:focus { background-color: #65BD60; }
+
+.wola-gray { color: #404041; }
+.bg-wola-gray { background-color: #404041; }
+.b--wola-gray { border-color: #404041; }
+
+.hover-wola-gray:hover,
+.hover-wola-gray:focus { color: #404041; }
+
+.hover-bg-wola-gray:hover,
+.hover-bg-wola-gray:focus { background-color: #404041; }
+
+.wola-warm-gray { color: #D5D0CA; }
+.bg-wola-warm-gray { background-color: #D5D0CA; }
+.b--wola-warm-gray { border-color: #D5D0CA; }
+
+.hover-wola-warm-gray:hover,
+.hover-wola-warm-gray:focus { color: #D5D0CA; }
+
+.hover-bg-wola-warm-gray:hover,
+.hover-bg-wola-warm-gray:focus { background-color: #D5D0CA; }
+
+.wola-red { color: #DA1A32; }
+.bg-wola-red { background-color: #DA1A32; }
+.b--wola-red { border-color: #DA1A32; }
+
+.hover-wola-red:hover,
+.hover-wola-red:focus { color: #DA1A32; }
+
+.hover-bg-wola-red:hover,
+.hover-bg-wola-red:focus { background-color: #DA1A32; }
+
+.wola-orange { color: #F26322; }
+.bg-wola-orange { background-color: #F26322; }
+.b--wola-orange { border-color: #F26322; }
+
+.hover-wola-orange:hover,
+.hover-wola-orange:focus { color: #F26322; }
+
+.hover-bg-wola-orange:hover,
+.hover-bg-wola-orange:focus { background-color: #F26322; }
+
+.wola-yellow { color: #F9C606; }
+.bg-wola-yellow { background-color: #F9C606; }
+.b--wola-yellow { border-color: #F9C606; }
+
+.hover-wola-yellow:hover,
+.hover-wola-yellow:focus { color: #F9C606; }
+
+.hover-bg-wola-yellow:hover,
+.hover-bg-wola-yellow:focus { background-color: #F9C606; }
+
+.arrow::after {
+    content: " ";
+    position: absolute;
+    top: 100%; /* At the bottom of the tooltip */
+    left: 50%;
+    margin-left: -6px;
+    border-width: 6px;
+    border-style: solid;
+    border-color: black transparent transparent transparent;
+}
 
 
-  </body>
+@media screen and (min-width: 30em) {
+	.flex-basis-25-ns {
+		flex-basis: 25%
+	}
+}
+
+</style>
+
+<body>
+
+	<div class="w-100 black-80 avenir pa3">
+
+		<h1 class="f1">WOLA's Brand Colors</h1>
+		<p class="f4"> Click on a circle to copy the HTML code for that color.</p>
+		
+		<div class="row pb5 flex flex-column flex-row-ns w-100">
+
+			<div class="w-100 flex-basis-25-ns pa2">
+				<h4 class="f3">Primary Colors</h4>
+				<p class="lh-copy measure f5">The primary colors establish a consistent communications and materials. The grey and white serve as a neutral base that reprent our values as credible and committed.
+				</p>
+				<ul class="lh-copy measure">
+					<li><span class="b">Slate Grey:</span> Credible</li>
+					<li><span class="b">White:</span> Committed</li>
+				</ul>
+			</div>
+
+			<div class="w-100 flex-basis-25-ns pa2 center tc relative">
+				<svg viewbox="0 0 150 150" class="w-100 mw5 h-auto wola-gray copy" data-clipboard-target="#gray">
+					<circle cx="75" cy="75" r="70" fill="currentColor" />
+				</svg>
+					<p class="mb1 mt0"><strong>90% Black</strong></p>
+					<p class="mb1 mt0">HTML <span id="gray">#404041</span></p>
+					<p class="mb1 mt0">CMYK 0 / 0 / 0 / 90</p>
+					<p class="mb1 mt0">RGB 65 / 64 / 66</p>
+			</div>
+
+			<div class="w-100 flex-basis-25-ns pa2 center tc relative">
+				<svg viewbox="0 0 150 150" class="w-100 mw5 h-auto white copy" data-clipboard-target="#white">
+					<circle cx="75" cy="75" r="70" fill="currentColor" stroke="#000000" />
+				</svg>
+					<p class="mb1 mt0"><strong>White</strong></p>
+					<p class="mb1 mt0">HTML <span id="white">#FFFFFF</span></p>
+					<p class="mb1 mt0">CMYK 0 / 0 / 0 / 0</p>
+					<p class="mb1 mt0">RGB 255 / 255 / 255</p>
+			</div>
+
+			<div class="w-100 flex-basis-25-ns pa2 center tc relative">
+				<svg viewbox="0 0 150 150" class="w-100 mw5 h-auto wola-warm-gray copy" data-clipboard-target="#warm-gray" title="test">
+					<circle cx="75" cy="75" r="70" fill="currentColor" />
+				</svg>
+					<p class="mb1 mt0"><strong>Pantone Warm Gray 2 CP</strong></p>
+					<p class="mb1 mt0">HTML <span id="warm-gray">#D5D0CA</span></p>
+					<p class="mb1 mt0">CMYK 6 / 7 / 10 / 11</p>
+					<p class="mb1 mt0">RGB 213 / 208 / 202</p>
+			</div>
+
+		</div>
+
+		<div class="flex flex-column flex-row-ns w-100 pb5">
+
+			<div class="w-100 flex-basis-25-ns pa2">
+				<h4 class="f3">Secondary Colors</h4>
+				<p class="lh-copy measure f5">The secondary colors create emphasis and differentiation within specific campaigns and programs for WOLA when necessary. Usage should be limited to highlight headlines and text. Each color represents WOLA’s complete set of values.</p>
+				<ul class="lh-copy measure">
+					<li><span class="b">Blue:</span> Influential</li>
+					<li><span class="b">Green:</span> Innovative</li>
+					<li><span class="b">Purple:</span> Courageous</li>
+				</ul>
+			</div>
+
+			<div class="w-100 flex-basis-25-ns pa2 center tc relative">
+				<svg viewbox="0 0 150 150" class="w-100 mw5 h-auto wola-blue copy" data-clipboard-target="#blue">
+					<circle cx="75" cy="75" r="70" fill="currentColor" />
+				</svg>
+					<p class="mb1 mt0"><strong>Pantone 186 CP</strong></p>
+					<p class="mb1 mt0">HTML <span id="blue">#DA1A32</span></p>
+					<p class="mb1 mt0">CMYK 83 / 1 / 0 / 0</p>
+					<p class="mb1 mt0">RGB 0 / 181 / 239</p>
+			</div>
+
+			<div class="w-100 flex-basis-25-ns pa2 center tc relative">
+				<svg viewbox="0 0 150 150" class="w-100 mw5 h-auto wola-green copy" data-clipboard-target="#green">
+					<circle cx="75" cy="75" r="70" fill="currentColor" />
+				</svg>
+					<p class="mb1 mt0"><strong>Pantone 360 CP</strong></p>
+					<p class="mb1 mt0">HTML <span id="green">#65BD60</span></p>
+					<p class="mb1 mt0">CMYK 63 / 0 / 84 / 0</p>
+					<p class="mb1 mt0">RGB 101 / 189 / 96</p>
+			</div>
+
+			<div class="w-100 flex-basis-25-ns pa2 center tc relative">
+				<svg viewbox="0 0 150 150" class="w-100 mw5 h-auto wola-purple copy" data-clipboard-target="#purple" title="test">
+					<circle cx="75" cy="75" r="70" fill="currentColor" />
+				</svg>
+					<p class="mb1 mt0"><strong>Pantone 266 CP</strong></p>
+					<p class="mb1 mt0">HTML <span id="purple">#603F99</span></p>
+					<p class="mb1 mt0">CMYK 76 / 90 / 0 / 0</p>
+					<p class="mb1 mt0">RGB 96 / 63 / 153</p>
+			</div>
+
+		</div>
+
+		<div class="flex flex-column flex-row-ns w-100">
+
+			<div class="w-100 flex-basis-25-ns pa2">
+				<h4 class="f3">Expanded Color Palette Options</h4>
+				<ul class="lh-copy measure">
+					<li><span class="b">Red:</span> Agressive, Energetic, Provocative, Attention-grabbing</li>
+					<li><span class="b">Orange:</span> Vitality, Fun, Exuberance</li>
+					<li><span class="b">Yellow:</span> Positivity, Light, Warmth, Motivation, Creativity</li>
+				</ul>
+			</div>
+
+			<div class="w-100 flex-basis-25-ns pa2 center tc relative">
+				<svg viewbox="0 0 150 150" class="w-100 mw5 h-auto wola-red copy" data-clipboard-target="#red">
+					<circle cx="75" cy="75" r="70" fill="currentColor" />
+				</svg>
+					<p class="mb1 mt0"><strong>Pantone 2995 CP</strong></p>
+					<p class="mb1 mt0">HTML <span id="red">#DA1A32</span></p>
+					<p class="mb1 mt0">CMYK 2 / 100 / 85 / 6</p>
+					<p class="mb1 mt0">RGB 218 / 26 / 50</p>
+			</div>
+
+			<div class="w-100 flex-basis-25-ns pa2 center tc relative">
+				<svg viewbox="0 0 150 150" class="w-100 mw5 h-auto wola-orange copy" data-clipboard-target="#orange">
+					<circle cx="75" cy="75" r="70" fill="currentColor" />
+				</svg>
+					<p class="mb1 mt0"><strong>Pantone 166 CP</strong></p>
+					<p class="mb1 mt0">HTML <span id="orange">#F26322</span></p>
+					<p class="mb1 mt0">CMYK 0 / 76 / 100 / 0</p>
+					<p class="mb1 mt0">RGB 242 / 99 / 34</p>
+			</div>
+
+			<div class="w-100 flex-basis-25-ns pa2 center tc relative">
+				<svg viewbox="0 0 150 150" class="w-100 mw5 h-auto wola-yellow copy" data-clipboard-target="#purple" title="test">
+					<circle cx="75" cy="75" r="70" fill="currentColor" />
+				</svg>
+					<p class="mb1 mt0"><strong>Pantone 7406 CP</strong></p>
+					<p class="mb1 mt0">HTML <span id="purple">#F9C606</span></p>
+					<p class="mb1 mt0">CMYK 0 / 20 / 100 / 2</p>
+					<p class="mb1 mt0">RGB 249 / 198 / 6</p>
+			</div>
+
+		</div>
+	
+	</div>
+
+
+</body>
+
+<script type="text/javascript">
+
+	var clipboard = new Clipboard('.copy');
+
+	clipboard.on('success', function(e) {
+	    console.info('Action:', e.action);
+	    console.info('Text:', e.text);
+	    console.info('Trigger:', e.trigger);
+
+	    showPopup(e.trigger);
+
+	    e.clearSelection();
+	});
+
+	clipboard.on('error', function(e) {
+	    console.error('Action:', e.action);
+	    console.error('Trigger:', e.trigger);
+
+	    e.action
+	});
+
+	function showPopup(el) {
+
+		var tooltip = document.createElement("span");
+		tooltip.append("Copied!");
+		tooltip.classList.add("absolute", "bg-black", "white", "pa2", "br2", "arrow");
+		tooltip.style.left = '50%';
+		tooltip.style.bottom = "97%";
+		tooltip.style.transform = "translateX(-50%)"
+
+		el.parentElement.append(tooltip)
+
+		setTimeout(function(){
+		  tooltip.remove();
+		}, 650);
+
+	}
+
+
+</script>
+
 </html>
