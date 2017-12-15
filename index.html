@@ -205,7 +205,7 @@
 </style>
 
 <body>
-    <div class="w-100 black-80 avenir ph4 mw9 center">
+    <div class="w-100 black-80 avenir ph4 mw9 center" id="main">
         <h1 class="f1">WOLA's Brand Colors</h1>
         <p class="f4"> Click on a circle to copy the HTML code for that color.</p>
         <div class="row pb5 flex flex-column flex-row-ns w-100">
@@ -408,16 +408,149 @@ function showPopup(el) {
 
 }
 
-const colors = {
-    darkgray: '#404041',
-    white: '#FFFFFF',
-    warmgray: '#D5D0CA',
-    blue: '00B5EF',
-    green: '#65BD60',
-    purple: '#603F99',
-    red: '#DA1A32',
-    orange: '#F26322',
-    yellow: '#603F99'
+const colors = [{
+        title: 'Primary Colors',
+        description: 'The primary colors establish a consistent communications and materials. The grey and white serve as a neutral base that reprent our values as credible and committed.',
+        bullets: '<li><span class="b">Slate Grey:</span> Credible</li>\n<li><span class="b">White:</span> Committed</li>',
+        colors: [{
+                name: '90% Black',
+                id: 'gray',
+                hex: '#404041',
+                cmyk: 'CMYK 0 / 0 / 0 / 90',
+                rgb: 'RGB 65 / 64 / 66'
+            },
+            {
+                name: 'White',
+                id: 'white',
+                hex: '#FFFFFF',
+                cmyk: 'CMYK 0 / 0 / 0 / 0',
+                rgb: 'RGB 255 / 255 / 255'
+            },
+            {
+                name: 'Pantone Warm Gray 2 CP',
+                id: 'warm-gray',
+                hex: '#D5D0CA',
+                cmyk: 'CMYK 6 / 7 / 10 / 11',
+                rgb: 'RGB 213 / 208 / 202'
+            }
+        ]
+    },
+    {
+        title: 'Secondary Colors',
+        description: 'The secondary colors create emphasis and differentiation within specific campaigns and programs for WOLA when necessary. Usage should be limited to highlight headlines and text. Each color represents WOLA’s complete set of values.',
+        bullets: '<li><span class="b">Blue:</span> Influential</li>\n<li><span class="b">Green:</span> Innovative</li>\n<li><span class="b">Purple:</span> Courageous</li>',
+        colors: [{
+                name: 'Pantone 186 CP',
+                id: 'blue',
+                hex: '#00B5EF',
+                cmyk: 'CMYK 83 / 1 / 0 / 0',
+                rgb: 'RGB 0 / 181 / 239'
+            },
+            {
+                name: 'Pantone 360 CP',
+                id: 'green',
+                hex: '#65BD60',
+                cmyk: 'CMYK 63 / 0 / 84 / 0',
+                rgb: 'RGB 101 / 189 / 96'
+            },
+            {
+                name: 'Pantone 266 CP',
+                id: 'purple',
+                hex: '#603F99',
+                cmyk: 'CMYK 76 / 90 / 0 / 0',
+                rgb: 'RGB 96 / 63 / 153'
+            }
+        ]
+    },
+    {
+        title: 'Expanded Color Palette Options',
+        description: '',
+        bullets: '<li><span class="b">Red:</span> Agressive, Energetic, Provocative, Attention-grabbing</li>\n<li><span class="b">Orange:</span> Vitality, Fun, Exuberance</li>\n<li><span class="b">Yellow:</span> Positivity, Light, Warmth, Motivation, Creativity</li>',
+        colors: [{
+                name: 'Pantone 2995 CP',
+                id: 'red',
+                hex: '#DA1A32',
+                cmyk: 'CMYK 2 / 100 / 85 / 6',
+                rgb: 'RGB 218 / 26 / 50'
+            },
+            {
+                name: 'Pantone 166 CP',
+                id: 'orange',
+                hex: '#F26322',
+                cmyk: 'CMYK 0 / 76 / 100 / 0',
+                rgb: 'RGB 242 / 99 / 34'
+            },
+            {
+                name: 'Pantone 7406 CP',
+                id: 'yellow',
+                hex: '#F9C606',
+                cmyk: 'CMYK 0 / 20 / 100 / 2',
+                rgb: 'RGB 249 / 198 / 6'
+            }
+        ]
+    }
+];
+
+content(colors)
+
+function content(arr) {
+    const main = document.querySelector('#main')
+    const container = document.createElement('div');
+    arr.forEach((val) => {
+        // console.log(val)
+        const row = document.createElement('div');
+        row.innerHTML = returnRow(val);
+        container.appendChild(row);
+    })
+    main.appendChild(container);
+}
+
+function returnRow(obj) {
+    let cells = [];
+    obj.colors.forEach((val) => { cells.push(returnCell(val)) })
+    return `
+	<div class="row pb5 flex flex-column flex-row-ns w-100">
+	    <div class="w-100 flex-basis-25-ns pa2">
+	        <h4 class="f3">${obj.title}</h4>
+	        <p class="lh-copy measure f5">${obj.description}
+	        </p>
+	        <ul class="lh-copy measure">
+	            ${obj.bullets}
+	        </ul>
+	    </div>
+	    ${cells.join('\n')}
+	</div>
+	`
+}
+
+function returnCell(obj) {
+
+    if (obj.id === 'white') {
+        return `
+		<div class="w-100 flex-basis-25-ns pa2 center tc relative">
+		    <svg viewbox="0 0 150 150" class="w-100 mw5 h-auto wola-${obj.id} copy" data-clipboard-target="${obj.id}">
+		        <circle cx="75" cy="75" r="70" stroke="#000000" fill="${obj.hex}" />
+		    </svg>
+		    <p class="mb1 mt0"><strong>${obj.name}</strong></p>
+		    <p class="mb1 mt0">HTML <span id="gray">${obj.hex}</span></p>
+		    <p class="mb1 mt0">${obj.cmyk}</p>
+		    <p class="mb1 mt0">${obj.rgb}</p>
+		</div>
+		`
+    } else {
+
+        return `
+		<div class="w-100 flex-basis-25-ns pa2 center tc relative">
+		    <svg viewbox="0 0 150 150" class="w-100 mw5 h-auto wola-${obj.id} copy" data-clipboard-target="${obj.id}">
+		        <circle cx="75" cy="75" r="70" fill="currentColor" />
+		    </svg>
+		    <p class="mb1 mt0"><strong>${obj.name}</strong></p>
+		    <p class="mb1 mt0">HTML <span id="gray">${obj.hex}</span></p>
+		    <p class="mb1 mt0">${obj.cmyk}</p>
+		    <p class="mb1 mt0">${obj.rgb}</p>
+		</div>
+		`
+    }
 }
 
 const colorInput1 = document.querySelector('#color1');
